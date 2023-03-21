@@ -1,15 +1,19 @@
 #include<stdio.h>
 #include<string.h>
 
-int main(){
+void swap(int *a, int *b){
+    *a = *a + *b;
+    *b = *a - *b;
+    *a = *a - *b;
+}
 
-    int x = 9;
-    for(int i = 1; i<=x; i++){
-        for(int j = 1; j<=i; j++){
-            printf("%d ", j);
-        }
-        printf("\n");
-    }
+
+
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    swap(&a, &b);
+    printf("%d %d", a, b);
     return 0;
 
 }
