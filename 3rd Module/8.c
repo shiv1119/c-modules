@@ -23,7 +23,7 @@ int main(){
     scanf("%d %d %d", &n1, &n2, &n3);
     gd1 = gcd(n1, n2);
     gd2 = gcd(gd1, n3);
-    result1 = LCM(n1, n2, gd2);
+    result1 = LCM(n1, n2, gd1);
     result2 = LCM(result1, n3, gd2);
     printf("The LCM of the numbers %d, %d and %d is %d", n1, n2, n3, result2);
 
